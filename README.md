@@ -6,11 +6,6 @@ Este sitio está diseñado para transmitir **profesionalismo, confianza y clarid
 
 ---
 
-## 🌐 Demo del proyecto
-*(Si ya está online, coloca aquí el enlace. En caso contrario, elimina esta sección.)*
-
----
-
 ## 📌 Características principales
 
 - **Página hero con imagen panorámica de Valencia**
