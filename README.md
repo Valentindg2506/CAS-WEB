@@ -6,6 +6,12 @@ Este sitio está diseñado para transmitir **profesionalismo, confianza y clarid
 
 ---
 
+## 🌐 Demo del proyecto
+
+https://slateblue-koala-134698.hostingersite.com/
+
+---
+
 ## 📌 Características principales
 
 - **Página hero con imagen panorámica de Valencia**
@@ -22,6 +28,12 @@ Este sitio está diseñado para transmitir **profesionalismo, confianza y clarid
 - **HTML5**
 - **CSS3 (animaciones, responsive, layout en grid/flex)**
 - **JavaScript (interactividad)**
+
+---
+## 📷 Vista previa
+<img width="1900" height="992" alt="image" src="https://github.com/user-attachments/assets/6f45a590-1dc9-4736-abe3-1fe57da4f9bc" />
+<img width="1902" height="897" alt="image" src="https://github.com/user-attachments/assets/71195b38-223b-4fdf-84ed-16fffcc0b405" />
+<img width="1898" height="898" alt="image" src="https://github.com/user-attachments/assets/097dea57-6ca5-4761-9733-f9278f5c3cf5" />
 
 ---
 
