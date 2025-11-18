@@ -26,8 +26,8 @@ https://slateblue-koala-134698.hostingersite.com/
 ## 🛠️ Tecnologías utilizadas
 
 - **HTML5**
-- **CSS3 (animaciones, responsive, layout en grid/flex)**
-- **JavaScript (interactividad)**
+- **CSS**
+- **JavaScript**
 
 ---
 ## 📷 Vista previa
