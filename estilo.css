@@ -1,242 +1,487 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title>CAS Real State</title>
-        <meta charset="utf-8">
-        <!-- Etiquetas de posicionamiento -->
-        <meta name="description" content="CAS Real State · Personal Shopper Inmobiliario en Valencia">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Bienes raices, Inmobiliaria, Propiedades, Valencia, Alquiler, Venta, Personal Shopper">
-        <meta name="author" content="CAS RS">
-        <link rel="icon" href="logo.svg" type="image/svg">
-        <meta property="og:title" content="CAS Real State">
-        <meta property="og:description" content="CAS RS · Te representamos sólo a ti">
-        <meta property="og:image" content="logo.svg">
-        <meta property="og:url" content="https://casrs.es">
-        <meta property="og:type" content="website">
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <header>
-            <!-- Cabecera -->
-            <div class="nav">
-                <div class="logo">CAS RS · Agencia de Bienes Raices</div>
-                    <img src="logo.svg">
-                <nav>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#reseñas">Reseñas</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-                <a class="btn-primary" href="#agenda">Agendar llamada</a>
-            </div>
-        </header>
+:root {
+  --bg: #f7f5f2;
+  --dark: #143642;
+  --accent: #d2a76c;
+  --text: #2e2e2e;
+  --white: #ffffff;
+}
 
-        <main>
-            <!-- HERO principal tipo casrs.es -->
-            <section class="hero reveal" id="inicio">
-                <div class="hero-left">
-                    <div class="hero-badge">CAS RS · Te representamos sólo a ti</div>
-                    <h1>Cada hogar es un mundo. Para nosotros, el centro de ese mundo eres tú.</h1>
-                    <p class="hero-text">
-                        Comprar, vender o invertir en Valencia puede ser abrumador: poco tiempo, muchas dudas y decisiones importantes.
-                        Nosotros te acompañamos en todo el proceso para que tomes decisiones con calma y seguridad.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="btn-primary" href="#agenda">Hablemos</a>
-                        <a class="btn-secondary" href="#servicios">Ver servicios</a>
-                    </div>
-                </div>
-            </section>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* HEADER / NAVBAR */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 245, 242, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.01em;
+}
+
+nav {
+  display: flex;
+  gap: 0.7rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #273036;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background: rgba(20, 54, 66, 0.06);
+}
+
+/* BOTONES */
+
+.btn-primary {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(20, 54, 66, 0.15);
+  background: #102a33;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid rgba(20, 54, 66, 0.15);
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 100vh;              /* ocupa el alto de toda la pantalla */
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;            /* centra vertical */
+  justify-content: center;        /* centra horizontal (luego lo ajustamos) */
+  background-image: url(inicio.png); 
+  background-size: cover;         /* que cubra toda la pantalla */
+  background-position: center;    /* centrada */
+  background-repeat: no-repeat;
+}
+.hero-left {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  color: #F0F8FF;
+}
+
+.hero-left h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: #F0F8FF;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1rem;
+  max-width: 540px;
+  color: #F5FFFA;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(210, 167, 108, 0.18);
+  border: 1px solid rgba(210, 167, 108, 0.7);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: #fef3c7;
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.15)
+  );
+}
 
 
-            <!-- Servicios tipo cards grandes -->
-            <section id="servicios" class="reveal">
-                <h2 class="section-title center">Nuestros Servicios</h2>
-                <p class="section-subtitle center">
-                    Si quieres vender, comprar, invertir o reformar, te acompañamos de principio a fin.
-                </p>
-                <div class="cards-horizontal">
+/* SECCIONES GENERALES */
 
-                    <!-- Tarjeta 1 -->
-                    <article class="service-card reveal">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1080&q=80" alt="Casa moderna con piscina">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Quiero Vender</h3>
-                            <p class="card-text">
-                                Analizamos el mercado, preparamos tu vivienda y diseñamos una estrategia de venta
-                                para que puedas vender en el mejor tiempo posible y al mejor precio, sin imprevistos.
-                            </p>
-                            <a href="#contacto" class="btn-primary">Quiero vender</a>
-                        </div>
-                    </article>
+.section-title {
+  font-size: 1.9rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
 
-                    <!-- Tarjeta 2 -->
-                    <article class="service-card invert reveal">
-                        <div class="card-image">
-                            <img src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1080" alt="Pareja revisando plano de vivienda">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Quiero Comprar</h3>
-                            <p class="card-text">
-                                Buscamos por ti, filtramos opciones, organizamos visitas y negociamos el precio.
-                                Tú decides con tranquilidad; nosotros nos ocupamos del trabajo de fondo.
-                            </p>
-                            <a href="#contacto" class="btn-primary">Quiero comprar</a>
-                        </div>
-                    </article>
+.section-title.center {
+  text-align: center;
+}
 
-                    <!-- Tarjeta 3 -->
-                    <article class="service-card reveal">
-                        <div class="card-image">
-                            <img src="https://www.hola.com/horizon/landscape/1b412dce5044-cocina-moderna-10a-a.jpg" alt="Cocina moderna">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Quiero Invertir</h3>
-                            <p class="card-text">
-                                Te ayudamos a encontrar oportunidades rentables, analizar números y minimizar riesgos,
-                                tanto si es tu primera inversión como si ya tienes experiencia en el mercado.
-                            </p>
-                            <a href="#contacto" class="btn-primary">Quiero invertir</a>
-                        </div>
-                    </article>
+.section-subtitle {
+  font-size: 0.98rem;
+  color: #4a5565;
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+}
 
-                    <!-- Tarjeta 4 -->
-                    <article class="service-card invert reveal">
-                        <div class="card-image">
-                            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/gymSsYkdVsXDSX0RKY3O/media/691220ced200f045ab7be9ad.jpeg" alt="Proyecto de reforma en vivienda">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Quiero Reformar</h3>
-                            <p class="card-text">
-                                Coordinamos la reforma de tu vivienda: presupuesto, tiempos y profesionales de confianza.
-                                Tú decides el estilo y nosotros nos encargamos de que todo se cumpla.
-                            </p>
-                            <a href="#contacto" class="btn-primary">Quiero reformar</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
+.section-subtitle.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
-            <!-- Reseñas -->
-            <section id="reseñas" class="testimonials reveal">
-                <h2 class="section-title center">Reseñas</h2>
-                <h3 class="section-subtitle center">
-                    Clientes que ya confiaron en CAS RS para comprar, vender o invertir en Valencia.
-                </h3>
-                <div class="testimonials-grid">
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Nos ayudaron a vender nuestro piso y comprar casa en Valencia sin sentirnos perdidos en ningún momento.
-                            Explican todo con claridad y se nota que miran por el cliente.”
-                        </p>
-                        <h4 class="testimonial-name">María & Javier</h4>
-                        <p class="testimonial-role">Venta de piso y compra de vivienda</p>
-                    </article>
+#servicios {
+  margin-top: 3rem;   /* o el valor que te guste */
+}
 
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Vivo fuera de España y necesitaba a alguien de confianza para invertir.
-                            CAS RS se encargó de todo el proceso y hoy tengo un piso alquilado desde el primer mes.”
-                        </p>
-                        <h4 class="testimonial-name">Alejandro</h4>
-                        <p class="testimonial-role">Inversor internacional</p>
-                    </article>
+/* CARDS SERVICIOS */
 
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Nos acompañaron desde la búsqueda hasta la firma. Nos ahorraron tiempo, peleaban por nosotros en cada negociación
-                            y eso nos dio mucha tranquilidad.”
-                        </p>
-                        <h4 class="testimonial-name">Lucía & Tomás</h4>
-                        <p class="testimonial-role">Primera vivienda en Valencia</p>
-                    </article>
+.cards-horizontal {
+  max-width: 1150px;
+  margin: 2.5rem auto 0;
+  padding: 0 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
 
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Nos acompañaron desde la búsqueda hasta la firma. Nos ahorraron tiempo, peleaban por nosotros en cada negociación
-                            y eso nos dio mucha tranquilidad.”
-                        </p>
-                        <h4 class="testimonial-name">Lucía & Tomás</h4>
-                        <p class="testimonial-role">Primera vivienda en Valencia</p>
-                    </article>
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.2rem;
+  border-radius: 28px;
+  background: #fdf7d9; /* beige clarito tipo screenshot */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
 
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Nos acompañaron desde la búsqueda hasta la firma. Nos ahorraron tiempo, peleaban por nosotros en cada negociación
-                            y eso nos dio mucha tranquilidad.”
-                        </p>
-                        <h4 class="testimonial-name">Lucía & Tomás</h4>
-                        <p class="testimonial-role">Primera vivienda en Valencia</p>
-                    </article>
+.service-card.invert {
+  flex-direction: row-reverse;
+}
 
-                    <article class="testimonial-card">
-                        <p class="testimonial-text">
-                            “Nos acompañaron desde la búsqueda hasta la firma. Nos ahorraron tiempo, peleaban por nosotros en cada negociación
-                            y eso nos dio mucha tranquilidad.”
-                        </p>
-                        <h4 class="testimonial-name">Lucía & Tomás</h4>
-                        <p class="testimonial-role">Primera vivienda en Valencia</p>
-                    </article>
-                </div>
-            </section>
+.card-image {
+  flex: 1;
+}
 
-            <!-- Agenda (ancla para el botón) -->
-            <section id="agenda" class="agenda reveal">
-                <div class="agenda-inner">
-                    <h2 class="section-title">Agenda una llamada</h2>
-                    <p class="section-subtitle">
-                        Cuéntanos en qué punto estás y qué necesitas. En la llamada de asesoramiento revisaremos juntos
-                        tus opciones y próximos pasos.
-                    </p>
-                    <!-- Poner iframe de Calendly o similar -->
-                    <a href="#contacto" class="btn-primary">Quiero agendar mi llamada</a>
-                </div>
-            </section>
+.card-image img {
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+  object-fit: cover;
+  max-height: 260px;
+}
 
-            <!-- Contacto -->
-            <section id="contacto" class="contact reveal">
-                <h2 class="section-title center">Contacto</h2>
-                <p class="section-subtitle center">
-                    Si prefieres escribirnos directamente, completa el formulario o visítanos en Valencia.
-                </p>
-                    <form class="contact-form">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" placeholder="Tu nombre">
+.card-content {
+  flex: 1;
+}
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="tu@correo.com">
+.card-title {
+  font-size: 1.7rem;
+  color: var(--dark);
+  margin-bottom: 0.9rem;
+}
 
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+.card-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #3e4b63;
+  margin-bottom: 1.3rem;
+}
 
-                        <input type="submit" value="Enviar mensaje" class="btn-primary btn-full">
-                    </form>
-                </div>
-            </section>
-        </main>
+/* TESTIMONIOS */
 
-        <footer>
-            <!-- Pie de página -->
-            <div class="footer-inner">
-                <p>© CAS Real State · Agencia de bienes raices · Valencia</p>
-        </footer>
+.testimonials {
+  padding: 2rem 1rem 3rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
 
-        <script>
-            const reveals = document.querySelectorAll('.reveal');
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.7rem;
+  margin-top: 1.5rem;
+}
 
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    obs.unobserve(entry.target);
-                }
-                });
-            }, { threshold: 0.2 });
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(20, 54, 66, 0.06);
+}
 
-            reveals.forEach(el => observer.observe(el));
-        </script>
-    </body>
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #4a5565;
+  margin-bottom: 1rem;
+}
 
-</html>
+.testimonial-name {
+  font-size: 1rem;
+  color: var(--dark);
+  margin: 0;
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* AGENDA */
+
+.agenda {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem 1rem;
+}
+
+.agenda-inner {
+  background: linear-gradient(135deg, #143642, #255c6e);
+  border-radius: 26px;
+  padding: 2rem 2.3rem;
+  color: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.agenda-inner .section-title {
+  color: #ffffff;
+}
+
+.agenda-inner .section-subtitle {
+  color: #e5e7eb;
+}
+
+.agenda-inner .btn-primary {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.agenda-inner .btn-primary:hover {
+  background: #e5e7eb;
+}
+
+/* CONTACTO */
+
+.contact {
+  max-width: 1150px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem 3rem;
+}
+
+.bloque {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  border-radius: 22px;
+  min-height: 320px;
+}
+
+.contact-form {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  padding: 0.55rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 1rem;
+  background: #f9fafb;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.footer-links a {
+  color: #374151;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ANIMACIÓN SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    margin-top: 1.8rem;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .service-card,
+  .service-card.invert {
+    flex-direction: column;
+    padding: 1.6rem;
+  }
+
+  .card-image img {
+    max-height: none;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-inner {
+    padding: 1.6rem 1.5rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
