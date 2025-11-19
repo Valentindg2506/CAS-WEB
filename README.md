@@ -1,4 +1,4 @@
-# CAS Real State – Página Web Profesional
+# CAS Real State – Página Web.
 
 Proyecto web desarrollado para **CAS Real State**, una agencia inmobiliaria enfocada en brindar acompañamiento completo al cliente durante los procesos de compra, venta o alquiler de propiedades.
 
