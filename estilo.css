@@ -118,16 +118,22 @@ nav a:hover {
 
 .hero {
   position: relative;
-  min-height: 100vh;              /* ocupa el alto de toda la pantalla */
+  min-height: 100vh;
+  /* ocupa el alto de toda la pantalla */
   padding: 0 1rem;
   display: flex;
-  align-items: center;            /* centra vertical */
-  justify-content: center;        /* centra horizontal (luego lo ajustamos) */
-  background-image: url(inicio.png); 
-  background-size: cover;         /* que cubra toda la pantalla */
-  background-position: center;    /* centrada */
+  align-items: center;
+  /* centra vertical */
+  justify-content: center;
+  /* centra horizontal (luego lo ajustamos) */
+  background-image: url('hero.svg');
+  background-size: cover;
+  /* que cubra toda la pantalla */
+  background-position: center;
+  /* centrada */
   background-repeat: no-repeat;
 }
+
 .hero-left {
   position: relative;
   z-index: 1;
@@ -167,16 +173,15 @@ nav a:hover {
   gap: 0.75rem;
   flex-wrap: wrap;
 }
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.15)
-  );
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.15));
 }
 
 
@@ -206,7 +211,18 @@ nav a:hover {
 }
 
 #servicios {
-  margin-top: 3rem;   /* o el valor que te guste */
+  margin-top: 3rem;
+  /* o el valor que te guste */
+}
+
+#reseñas {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#reseñas a {
+  margin-top: 3rem;
 }
 
 /* CARDS SERVICIOS */
@@ -226,7 +242,8 @@ nav a:hover {
   gap: 2.5rem;
   padding: 2.2rem;
   border-radius: 28px;
-  background: #fdf7d9; /* beige clarito tipo screenshot */
+  background: #fdf7d9;
+  /* beige clarito tipo screenshot */
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
@@ -304,39 +321,6 @@ nav a:hover {
   color: #6b7280;
 }
 
-/* AGENDA */
-
-.agenda {
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  padding: 2.5rem 1rem;
-}
-
-.agenda-inner {
-  background: linear-gradient(135deg, #143642, #255c6e);
-  border-radius: 26px;
-  padding: 2rem 2.3rem;
-  color: #ffffff;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
-}
-
-.agenda-inner .section-title {
-  color: #ffffff;
-}
-
-.agenda-inner .section-subtitle {
-  color: #e5e7eb;
-}
-
-.agenda-inner .btn-primary {
-  background: #f3f4f6;
-  color: #111827;
-}
-
-.agenda-inner .btn-primary:hover {
-  background: #e5e7eb;
-}
-
 /* CONTACTO */
 
 .contact {
@@ -358,38 +342,6 @@ nav a:hover {
   min-height: 320px;
 }
 
-.contact-form {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 1.6rem 1.8rem;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.contact-form label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--dark);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.8);
-  padding: 0.55rem 0.7rem;
-  font-family: inherit;
-  font-size: 0.9rem;
-  outline: none;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
 /* FOOTER */
 
 footer {
@@ -401,12 +353,20 @@ footer {
 
 .footer-inner {
   max-width: 1150px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0rem;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: purple;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 100px;
+  width: auto;
+  display: block;
 }
 
 .footer-links {
@@ -440,20 +400,71 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    margin-top: 1.8rem;
+/* ===== Ajustes para móvil ===== */
+/* ===== Ajustes para móvil ===== */
+@media (max-width: 768px) {
+
+  /* CABECERA / NAV */
+  header {
+    padding: 0.5rem 1rem;
   }
 
-  .hero-right {
-    order: -1;
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Ocultar el texto del logo en móvil para ahorrar espacio */
+  .logo {
+    display: none !important;
+  }
+
+  .nav>a img {
+    max-height: 40px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* BOTÓN “Agendar llamada” más compacto */
+  .btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: calc(100vh - 120px);
+    padding: 2rem 1rem;
+    background-position: center top;
+    background-attachment: scroll;
+    flex-direction: column;
+    text-align: center;
   }
 
   .hero-left h1 {
     font-size: 2rem;
+    line-height: 1.2;
   }
 
+  .hero-text {
+    font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* CARDS SERVICIOS */
   .service-card,
   .service-card.invert {
     flex-direction: column;
@@ -464,24 +475,22 @@ footer {
     max-height: none;
   }
 
+  /* TESTIMONIOS */
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
+  /* CONTACTO */
   .bloque {
     grid-template-columns: 1fr;
   }
+}
 
-  .agenda-inner {
-    padding: 1.6rem 1.5rem;
-  }
+/* CALENDLY */
 
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.calendly-section {
+  max-width: 1150px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  min-height: 80vh;
 }
