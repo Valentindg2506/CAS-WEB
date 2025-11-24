@@ -284,41 +284,156 @@ nav a:hover {
 /* TESTIMONIOS */
 
 .testimonials {
-  padding: 2rem 1rem 3rem;
-  max-width: 1150px;
+  padding: 3rem 1rem 4rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.7rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .testimonial-card {
   background: #ffffff;
-  border-radius: 24px;
-  padding: 1.4rem 1.6rem;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(20, 54, 66, 0.06);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(20, 54, 66, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.testimonial-text {
-  font-size: 0.95rem;
-  color: #4a5565;
-  margin-bottom: 1rem;
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-.testimonial-name {
-  font-size: 1rem;
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #e8c896);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.author-info h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.05rem;
   color: var(--dark);
-  margin: 0;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+  gap: 0.15rem;
+  font-size: 1rem;
+  color: #fbbf24;
+  margin-bottom: 0.2rem;
 }
 
 .testimonial-role {
   font-size: 0.85rem;
   color: #6b7280;
+  margin: 0;
+}
+
+.google-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #5f6368;
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #e8eaed;
+}
+
+.google-badge img {
+  width: 12px;
+  height: 12px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #4a5565;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+  position: relative;
+  padding-left: 1.2rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.testimonial-card.expanded .testimonial-text {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  display: block;
+}
+
+.testimonial-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+  font-size: 2.5rem;
+  color: var(--accent);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+  color: var(--dark);
 }
 
 /* CONTACTO */
@@ -327,6 +442,86 @@ nav a:hover {
   max-width: 1150px;
   margin: 0 auto 3rem;
   padding: 0 1rem 3rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(20, 54, 66, 0.06);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 0.95rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: #f9fafb;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(210, 167, 108, 0.15);
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form .btn-full {
+  margin-top: 0.5rem;
+}
+
+.success-message {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(20, 54, 66, 0.06);
+  text-align: center;
+}
+
+.success-message h3 {
+  color: var(--dark);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #4a5565;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.success-message .countdown-text {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
 }
 
 .bloque {
@@ -398,6 +593,42 @@ footer {
   transform: translateY(0);
 }
 
+/* ESTILOS PÁGINAS INTERNAS */
+.page-content {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+.page-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a5565;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cta-box {
+  background: #fdf7d9;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  border: 1px solid rgba(210, 167, 108, 0.2);
+}
+
+.cta-box h3 {
+  color: var(--dark);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
 /* RESPONSIVE */
 
 /* ===== Ajustes para móvil ===== */
@@ -431,12 +662,6 @@ footer {
     font-size: 0.9rem;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  /* BOTÓN “Agendar llamada” más compacto */
-  .btn-primary {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
   }
 
   /* HERO */
@@ -484,13 +709,4 @@ footer {
   .bloque {
     grid-template-columns: 1fr;
   }
-}
-
-/* CALENDLY */
-
-.calendly-section {
-  max-width: 1150px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  min-height: 80vh;
 }
