@@ -6,7 +6,7 @@ Este sitio está diseñado para transmitir **profesionalismo, confianza y clarid
 
 ---
 
-## 🌐 Demo del proyecto
+## 🌐 URL del proyecto
 
 https://www.casrs.es
 
