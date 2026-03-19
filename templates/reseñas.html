@@ -14,26 +14,27 @@
     <!-- HEADER -->
     <header id="main-header" class="scrolled">
         <div class="nav">
-            <a href="index.html" class="logo" style="color: var(--text-dark);">CAS RS</a>
+            <a href="../index.html" class="logo" style="color: var(--text-dark);">CAS RS</a>
             <nav id="navbar">
-                <a href="index.html#inicio">Inicio</a>
-                <a href="index.html#servicios">Servicios</a>
+                <a href="../index.html#inicio">Inicio</a>
+                <a href="../index.html#servicios">Servicios</a>
                 <a href="reseñas.html" class="active">Reseñas</a>
-                <a href="index.html#contacto">Contacto</a>
+                <a href="../index.html#contacto">Contacto</a>
             </nav>
             <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
                 <span class="hamburger" style="background-color: var(--text-dark);"></span>
             </button>
         </div>
     </header>
-    
+
     <main>
         <section id="reseñas" class="section section-bg-alt" style="padding-top: 10rem;">
             <div class="section-header">
                 <span class="section-tag">Experiencias Reales</span>
                 <h1 class="section-title">Lo que dicen de nosotros</h1>
                 <p class="section-subtitle">
-                    Clientes VIP que nos confiaron su patrimonio en Valencia para la compra, venta e inversión inmobiliaria.
+                    Clientes VIP que nos confiaron su patrimonio en Valencia para la compra, venta e inversión
+                    inmobiliaria.
                 </p>
             </div>
             <div class="testimonials-grid">
@@ -48,7 +49,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Solo palabras de agradecimiento. En una operación tan importante como
@@ -1186,12 +1187,13 @@
         <div class="footer-inner">
             <span class="footer-logo">CAS RS</span>
             <div class="footer-nav">
-                <a href="index.html#inicio">Inicio</a>
-                <a href="index.html#servicios">Servicios</a>
+                <a href="../index.html">Inicio</a>
+                <a href="../index.html#servicios">Servicios</a>
                 <a href="reseñas.html">Reseñas</a>
-                <a href="index.html#contacto">Contacto VIP</a>
+                <a href="../index.html#contacto">Contacto VIP</a>
             </div>
-            <p class="footer-bottom">© 2024 CAS Real State · Tu Agencia de Bienes Raíces de Lujo · Valencia</p>
+            <p class="footer-bottom">© 2024 CAS Real State · Tu Personal Shopper Inmobiliario de Confianza · Valencia
+            </p>
         </div>
     </footer>
 
@@ -1214,15 +1216,15 @@
                     btn.style.color = 'var(--text-dark)';
                     btn.style.borderColor = 'var(--border-light)';
                     btn.textContent = 'Ver más';
-                    
+
                     btn.addEventListener('click', () => {
                         text.style.overflow = text.style.overflow === 'visible' ? 'hidden' : 'visible';
                         text.style.display = text.style.display === 'block' ? '-webkit-box' : 'block';
                         btn.textContent = btn.textContent === 'Ver más' ? 'Ver menos' : 'Ver más';
                     });
-                    
+
                     card.appendChild(btn);
-                    
+
                     // Asegurar que comience elidido
                     text.style.display = '-webkit-box';
                     text.style.webkitLineClamp = '4';
@@ -1233,4 +1235,5 @@
         });
     </script>
 </body>
+
 </html>
