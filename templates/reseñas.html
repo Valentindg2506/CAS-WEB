@@ -2,35 +2,40 @@
 <html lang="es">
 
 <head>
-    <title>CAS Real State - Reseñas</title>
+    <title>CAS Real State | Reseñas de Clientes VIP</title>
     <meta charset="utf-8">
-    <meta name="description" content="CAS Real State · Reseñas de Clientes">
+    <meta name="description" content="CAS Real State · Reseñas de Clientes Satisfechos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.svg" type="image/svg">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="reseñas.css">
+    <link rel="icon" href="../img/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="../style/estilo.css">
 </head>
 
 <body>
-    <header>
+    <!-- HEADER -->
+    <header id="main-header" class="scrolled">
         <div class="nav">
-            <div class="logo">CAS RS · Agencia de Bienes Raices</div>
-            <a href="index.html">
-                <img src="logo.svg" alt="CAS Logo" style="height: 40px;">
-            </a>
-            <nav>
-                <a href="index.html">Inicio</a>
+            <a href="index.html" class="logo" style="color: var(--text-dark);">CAS RS</a>
+            <nav id="navbar">
+                <a href="index.html#inicio">Inicio</a>
                 <a href="index.html#servicios">Servicios</a>
-                <a href="reseñas.html">Reseñas</a>
+                <a href="reseñas.html" class="active">Reseñas</a>
                 <a href="index.html#contacto">Contacto</a>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+                <span class="hamburger" style="background-color: var(--text-dark);"></span>
+            </button>
         </div>
     </header>
-
+    
     <main>
-        <!-- Reseñas -->
-        <section id="reseñas" class="testimonials">
-            <h1 class="section-title center">Reseñas</h1>
+        <section id="reseñas" class="section section-bg-alt" style="padding-top: 10rem;">
+            <div class="section-header">
+                <span class="section-tag">Experiencias Reales</span>
+                <h1 class="section-title">Lo que dicen de nosotros</h1>
+                <p class="section-subtitle">
+                    Clientes VIP que nos confiaron su patrimonio en Valencia para la compra, venta e inversión inmobiliaria.
+                </p>
+            </div>
             <div class="testimonials-grid">
                 <article class="testimonial-card">
                     <div class="card-header">
@@ -66,7 +71,7 @@
                             <p class="testimonial-role">Compra de vivienda en Valencia</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Para mí fue un tremendo hallazgo encontrar a Claudia, una excelente
@@ -87,7 +92,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Muy agradecidos con Claudia Suarez, que desde el primer momento nos
@@ -107,7 +112,7 @@
                             <p class="testimonial-role">Asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Hemos sido atendidos por Claudia; ha sido muy amable, cercana, además
@@ -125,7 +130,7 @@
                             <p class="testimonial-role">Asesoramiento para alquiler y propietarios</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Agencia muy profesional y eficiente. Claudia ha sido majísima y de gran
@@ -144,7 +149,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Excelente servicio. Muy contentos con la ayuda que nos ha brindado
@@ -166,7 +171,7 @@
                             <p class="testimonial-role">Asesoramiento hipotecario y compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Nuestra agente hipotecaria, Claudia, fue lo mejor (después del
@@ -188,7 +193,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Puedo decir que ya soy propietario. Y gracias a vosotros, y en especial
@@ -211,7 +216,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Compramos hoy nuestra casa. No podemos estar más contentos con haberlo
@@ -233,7 +238,7 @@
                             <p class="testimonial-role">Acompañamiento en compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Experiencia excepcional con estos profesionales. Un agradecimiento
@@ -254,7 +259,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia nos ha ayudado a encontrar la casa de nuestros sueños. Desde el
@@ -274,7 +279,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Fantástico el trato y la atención. Claudia, un trato muy humano y gran
@@ -293,7 +298,7 @@
                             <p class="testimonial-role">Asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Muy satisfecho con el asesoramiento, la atención detallada y la
@@ -312,7 +317,7 @@
                             <p class="testimonial-role">Asesoramiento y acompañamiento en compra</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Desde el primer momento el trato y la atención ha sido de 10. Ella es
@@ -337,7 +342,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Acabamos de firmar la compra de nuestra casa y todo el proceso ha sido
@@ -361,7 +366,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Ha sido un placer poder habernos encontrado con Claudia para adquirir
@@ -383,7 +388,7 @@
                             <p class="testimonial-role">Asesoramiento en compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Recomiendo a Claudia Suárez, no solo es muy profesional sino también
@@ -405,7 +410,7 @@
                             <p class="testimonial-role">Asesoramiento durante compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Nuestra experiencia en Comprarcasa ha sido muy satisfactoria. El trato
@@ -426,7 +431,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia ha sido mi contacto en Comprarcasa y no creo que es posible
@@ -448,7 +453,7 @@
                             <p class="testimonial-role">Acompañamiento completo y postventa</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Desde la primera visita Claudia se involucró muchísimo y ha estado a mi
@@ -468,7 +473,7 @@
                             <p class="testimonial-role">Compraventa de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia nos enseñó el inmueble y la visita fue genial. Ella es muy
@@ -488,7 +493,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia me ha acompañado en todo el proceso de la compra de mi
@@ -508,7 +513,7 @@
                             <p class="testimonial-role">Venta de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Hemos vendido el piso y encantados con el trato, gestión y
@@ -528,7 +533,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Hemos comprado o alquilado varias casas a lo largo de los años y, a
@@ -550,7 +555,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Como ya he leído en muchas de las opiniones, un trato muy profesional y
@@ -574,7 +579,7 @@
                             <p class="testimonial-role">Atención y asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Muy profesionales y atendiendo siempre las peticiones de los clientes.
@@ -593,7 +598,7 @@
                             <p class="testimonial-role">Compra de vivienda para inversión</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“He tenido el placer de ser atendido por Claudia, una chica amable,
@@ -614,7 +619,7 @@
                             <p class="testimonial-role">Contrato de arras y asesoramiento</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Acabamos de firmar el contrato de arras. El trato de Comprarcasa es
@@ -633,7 +638,7 @@
                             <p class="testimonial-role">Búsqueda y compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Grandísimos profesionales, de los que casi no quedan. Gracias a Claudia
@@ -653,7 +658,7 @@
                             <p class="testimonial-role">Asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia es una gran profesional, nos ha atendido de manera excelente
@@ -672,7 +677,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Gracias Claudia Suárez, fuiste de gran ayuda en todo el proceso de
@@ -692,7 +697,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Desde el momento 0, la implicación de todos en la inmobiliaria y de
@@ -711,7 +716,7 @@
                             <p class="testimonial-role">Acompañamiento completo en compraventa</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Tuvo una experiencia fenomenal con Comprarcasa, específicamente con
@@ -730,7 +735,7 @@
                             <p class="testimonial-role">Compra de vivienda y asesoramiento administrativo</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Con Claudia de Comprarcasa desde el primer momento me convenció su
@@ -750,7 +755,7 @@
                             <p class="testimonial-role">Atención inmobiliaria</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Nos atendió Claudia, una mujer muy simpática y agradable. Muy
@@ -768,7 +773,7 @@
                             <p class="testimonial-role">Visita y asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Buenas tardes, hemos ido a visitar un piso con Claudia y el trato
@@ -787,7 +792,7 @@
                             <p class="testimonial-role">Compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia hizo un trabajo increíble, encargándose de todo y aconsejándome
@@ -805,7 +810,7 @@
                             <p class="testimonial-role">Asesoramiento y visita inmobiliaria</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Ha sido una experiencia muy buena, sobre todo porque Claudia, la chica
@@ -824,7 +829,7 @@
                             <p class="testimonial-role">Servicio y asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Muy contentos con el servicio recibido por parte de Claudia. Todo ha
@@ -842,7 +847,7 @@
                             <p class="testimonial-role">Visita de inmueble</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia ha sido muy agradable y profesional en la visita que he
@@ -860,7 +865,7 @@
                             <p class="testimonial-role">Visita y asesoramiento económico</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Vimos una vivienda con Claudia, fue puntual, entendió nuestras
@@ -878,7 +883,7 @@
                             <p class="testimonial-role">Atención y asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Gracias a Claudia por ser tan amable, eficiente y profesional. Un
@@ -896,7 +901,7 @@
                             <p class="testimonial-role">Visita inmobiliaria</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia ha sido muy agradable y profesional en la visita que he
@@ -914,7 +919,7 @@
                             <p class="testimonial-role">Visita de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Vimos una vivienda con Claudia, fue puntual, entendió nuestras
@@ -932,7 +937,7 @@
                             <p class="testimonial-role">Atención y asesoramiento</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Gracias a Claudia por ser tan amable, eficiente y profesional. Un
@@ -950,7 +955,7 @@
                             <p class="testimonial-role">Servicio inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Excelente servicio, buena atención, resolutivos y generan confianza
@@ -968,7 +973,7 @@
                             <p class="testimonial-role">Visita y asesoramiento</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“A parte de que Claudia es una profesional GRANDE, es un encanto de
@@ -986,7 +991,7 @@
                             <p class="testimonial-role">Asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Muchísimas gracias a Claudia por su atención, profesionalidad y tiempo.
@@ -1004,7 +1009,7 @@
                             <p class="testimonial-role">Visita de piso</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Hola. Claudia me enseñó el piso. Vamos a permanecer en contacto. Muy
@@ -1022,7 +1027,7 @@
                             <p class="testimonial-role">Asesoramiento en compra de vivienda</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Estamos muy contentas con la ayuda y la buena gestión, sobre todo
@@ -1040,7 +1045,7 @@
                             <p class="testimonial-role">Asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Estupenda experiencia, Claudia nos resolvió todas las dudas y nos ayudó
@@ -1058,7 +1063,7 @@
                             <p class="testimonial-role">Visita y explicación de inmueble</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia nos ha atendido de maravilla, un encanto, sin prisas y
@@ -1076,7 +1081,7 @@
                             <p class="testimonial-role">Atención profesional en compra</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Trato muy profesional y transparente por parte de Claudia.”</p>
@@ -1093,7 +1098,7 @@
                             <p class="testimonial-role">Visita de inmueble</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Gran atención por parte de Claudia mostrando cada detalle del piso.
@@ -1111,7 +1116,7 @@
                             <p class="testimonial-role">Atención y asesoramiento inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Súper atención de Claudia y a muy corto plazo me atendió. Quedé muy
@@ -1129,7 +1134,7 @@
                             <p class="testimonial-role">Atención en proceso inmobiliario</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia nos ha atendido estupendamente, una gran profesional.”</p>
@@ -1146,7 +1151,7 @@
                             <p class="testimonial-role">Atención en compra/visita</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Excelente atención por parte de Claudia.”</p>
@@ -1163,7 +1168,7 @@
                             <p class="testimonial-role">Búsqueda y compra de vivienda en Valencia</p>
                         </div>
                         <div class="google-badge">
-                            <img src="google-logo.svg" alt="Google">
+                            <img src="../img/google-logo.svg" alt="Google">
                         </div>
                     </div>
                     <p class="testimonial-text">“Claudia is a passionate and professional woman who helped me from the
@@ -1176,37 +1181,56 @@
         </section>
     </main>
 
+    <!-- FOOTER LUXURY MINIMAL -->
     <footer>
         <div class="footer-inner">
-            <img src="logo.svg" alt="CAS Real State Logo" class="footer-logo">
-            <p>© CAS Real State · Agencia de bienes raices · Valencia</p>
+            <span class="footer-logo">CAS RS</span>
+            <div class="footer-nav">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="reseñas.html">Reseñas</a>
+                <a href="index.html#contacto">Contacto VIP</a>
+            </div>
+            <p class="footer-bottom">© 2024 CAS Real State · Tu Agencia de Bienes Raíces de Lujo · Valencia</p>
         </div>
     </footer>
 
-
+    <!-- JAVASCRIPT ANIMACIONES Y MENU -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.testimonial-card');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.getElementById('navbar');
+            menuToggle.addEventListener('click', () => navbar.classList.toggle('active'));
 
+            // Botones "Leer Más" para testimonios truncados
+            const cards = document.querySelectorAll('.testimonial-card');
             cards.forEach(card => {
                 const text = card.querySelector('.testimonial-text');
-
-                // Check if text is truncated
-                if (text.scrollHeight > text.clientHeight) {
+                if (text && text.scrollHeight > text.clientHeight) {
                     const btn = document.createElement('button');
-                    btn.className = 'read-more-btn';
+                    btn.className = 'btn-ghost-white';
+                    btn.style.marginTop = '1rem';
+                    btn.style.padding = '0.5rem 1rem';
+                    btn.style.color = 'var(--text-dark)';
+                    btn.style.borderColor = 'var(--border-light)';
                     btn.textContent = 'Ver más';
-
+                    
                     btn.addEventListener('click', () => {
-                        card.classList.toggle('expanded');
-                        btn.textContent = card.classList.contains('expanded') ? 'Ver menos' : 'Ver más';
+                        text.style.overflow = text.style.overflow === 'visible' ? 'hidden' : 'visible';
+                        text.style.display = text.style.display === 'block' ? '-webkit-box' : 'block';
+                        btn.textContent = btn.textContent === 'Ver más' ? 'Ver menos' : 'Ver más';
                     });
-
+                    
                     card.appendChild(btn);
+                    
+                    // Asegurar que comience elidido
+                    text.style.display = '-webkit-box';
+                    text.style.webkitLineClamp = '4';
+                    text.style.webkitBoxOrient = 'vertical';
+                    text.style.overflow = 'hidden';
                 }
             });
         });
     </script>
 </body>
-
 </html>
