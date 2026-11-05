@@ -47,4 +47,4 @@ Este proyecto forma parte de mi portfolio como **Estudiante de Desarrollo de Apl
 ## 📞 Contacto
 
 **Valentín Antonio De Gennaro**  
-💼 LinkedIn: www.linkedin.com/in/valentin-antonio-de-gennaro
+💼 LinkedIn: https://www.linkedin.com/in/valentindg
